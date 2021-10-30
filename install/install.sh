@@ -1,6 +1,6 @@
 set -e
 webinf="${1?'Usage: ./install [path-to-web-inf]'}"
-webinf="$(readlink -f $webinf)"
+webinf=$(readlink -f "$webinf")
 
 
 cd "$(readlink -f $(dirname $0))"
