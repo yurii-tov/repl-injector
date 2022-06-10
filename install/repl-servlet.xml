@@ -1,5 +1,9 @@
 <servlet>
     <servlet-name>repl</servlet-name>
     <servlet-class>ru._1c.tools.ReplServlet</servlet-class>
+    <init-param>
+        <param-name>port</param-name>
+        <param-value>7777</param-value>
+    </init-param>
     <load-on-startup>1</load-on-startup>
 </servlet>

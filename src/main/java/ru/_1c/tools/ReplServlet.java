@@ -8,7 +8,7 @@ public class ReplServlet extends GenericServlet {
 
     @Override
     public void init() {
-        Repl.start();
+        Repl.start(getServletConfig().getInitParameter("port"));
     }
 
     @Override
