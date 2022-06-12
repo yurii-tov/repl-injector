@@ -25,7 +25,8 @@ public class Repl {
                         startServer.invoke(Clojure.read(String.format("{:name \"socket-repl\" :port %s :accept clojure.main/repl}", port)));
                 });
         }};
-        repls.get(type).accept(port);
+        final Thread thread = new Thread(() -> repls.get(type).accept(port));
+        thread.start();
         System.out.printf("Starting %s REPL at localhost:%s\n", type, port);
     }
 
