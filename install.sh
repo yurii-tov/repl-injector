@@ -1,5 +1,5 @@
 set -e
-webinf="${1?'Usage: ./install [path-to-web-inf]'}"
+webinf="${1?'Usage: ./install <path-to-web-inf>'}"
 webinf=$(readlink -f "$webinf")
 
 

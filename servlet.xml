@@ -1,6 +1,11 @@
+<!--REPL servlet-->
 <servlet>
     <servlet-name>repl</servlet-name>
     <servlet-class>ru._1c.tools.ReplServlet</servlet-class>
+    <init-param>
+        <param-name>type</param-name>
+        <param-value>nrepl</param-value>
+    </init-param>
     <init-param>
         <param-name>port</param-name>
         <param-value>7777</param-value>
