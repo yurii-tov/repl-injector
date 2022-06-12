@@ -6,7 +6,7 @@ webinf=$(readlink -f "$webinf")
 cd "$(readlink -f $(dirname $0))"
 
 
-cp -v ../target/repl-1.0-SNAPSHOT-jar-with-dependencies.jar "$webinf/lib/repl.jar"
+cp -v target/*-jar-with-dependencies.jar "$webinf/lib/repl.jar"
 
 
 printf "Install web.xml settings..."
