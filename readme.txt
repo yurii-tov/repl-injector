@@ -10,4 +10,4 @@
 
 
 ** Installation
-   install/install.sh
+   ./install.sh
