@@ -11,5 +11,5 @@ cp -v ../target/repl-1.0-SNAPSHOT-jar-with-dependencies.jar "$webinf/lib/repl.ja
 
 printf "Install web.xml settings..."
 sed -i '/<!--REPL servlet-->/,/<\/servlet>/ d' "$webinf/web.xml"
-sed -i '/<\/welcome-file-list>/ r repl-servlet.xml' "$webinf/web.xml"
+sed -i '/<\/welcome-file-list>/ r servlet.xml' "$webinf/web.xml"
 echo ' done'
