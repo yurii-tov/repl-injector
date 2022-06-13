@@ -4,11 +4,11 @@
     <servlet-class>ru._1c.tools.ReplServlet</servlet-class>
     <init-param>
         <param-name>type</param-name>
-        <param-value>nrepl</param-value>
+        <param-value>${type}</param-value>
     </init-param>
     <init-param>
         <param-name>port</param-name>
-        <param-value>7777</param-value>
+        <param-value>${port}</param-value>
     </init-param>
     <load-on-startup>1</load-on-startup>
 </servlet>
