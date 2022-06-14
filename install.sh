@@ -37,5 +37,5 @@ cp -v target/*-jar-with-dependencies.jar "$webinf/lib/repl.jar"
 printf "Installing servlet config..."
 sed -i '/<!--REPL servlet-->/,/<\/servlet>/ d' "$webinf/web.xml"
 sed -i '/<\/welcome-file-list>/ r servlet.xml' "$webinf/web.xml"
-sed -i 's:${type}:'$type':; s:${port}:'$port':' "$webinf/web.xml"
+sed -i '/<!--REPL servlet-->/,/<\/servlet>/ {s:${type}:'$type':; s:${port}:'$port':}' "$webinf/web.xml"
 echo ' done'
